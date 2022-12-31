@@ -1,0 +1,17 @@
+Windows는 File setting 들어가서 keymap에서 기능 단축기 찾으면 됨 
+생성자 getter setter등등은 Alt + ins
+
+
+private static Map<Long, Member> store = new HashMap<>()
+
+데이터베이스가 아직 확정이 안되었다. 그래도 개발은 진행해야 하니 가장 단순한, 메모리 회원 저장소를
+구현해서 우선 개발을 진행하자.
+> 참고: HashMap 은 동시성 이슈가 발생할 수 있다. 이런 경우 ConcurrentHashMap 을 사용하자
+
+
+회원 도메인 설계의 문제점
+이 코드의 설계상 문제점은 무엇일까요?
+다른 저장소로 변경할 때 OCP 원칙을 잘 준수할까요?
+DIP를 잘 지키고 있을까요?
+의존관계가 인터페이스 뿐만 아니라 구현까지 모두 의존하는 문제점이 있음
+주문까지 만들고나서 문제점과 해결 방안을 설명
